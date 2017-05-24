@@ -2,18 +2,19 @@
 
 Links usados
 
-[Vue](https://vuejs.org/)
-[Vue Router](http://router.vuejs.org/en)
-[Vue Webpack](http://vuejs-templates.github.io/webpack/)
-[Vue loader](http://vuejs.github.io/vue-loader)
-[Todo Example](https://vuejs.org/v2/examples/todomvc.html)
+- [Vue](https://vuejs.org/)
+- [Vue Router](http://router.vuejs.org/en)
+- [Vue Webpack](http://vuejs-templates.github.io/webpack/)
+- [Vue loader](http://vuejs.github.io/vue-loader)
+- [Todo Example](https://vuejs.org/v2/examples/todomvc.html)
 
 
-[Single file components - SFC](https://medium.com/emanuelg-blog/descomplicando-os-single-file-components-do-vue-js-2df16724baab)
+# Posts
+- [Single file components - SFC](https://medium.com/emanuelg-blog/descomplicando-os-single-file-components-do-vue-js-2df16724baab)
 
 
 # Tools
-[Chrome Dev tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+- [Chrome Dev tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
 
 
 > A Vue.js project
