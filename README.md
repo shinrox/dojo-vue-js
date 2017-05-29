@@ -7,6 +7,7 @@ Links usados
 - [Vue Webpack](http://vuejs-templates.github.io/webpack/)
 - [Vue loader](http://vuejs.github.io/vue-loader)
 - [Todo Example](https://vuejs.org/v2/examples/todomvc.html)
+- [Awesome Vue](https://github.com/vuejs/awesome-vue)
 
 
 # Posts
