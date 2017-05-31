@@ -8,6 +8,7 @@ Links usados
 - [Vue loader](http://vuejs.github.io/vue-loader)
 - [Todo Example](https://vuejs.org/v2/examples/todomvc.html)
 - [Why no template URL](https://vuejs.org/2015/10/28/why-no-template-url/)
+- [Awesome Vue](https://github.com/vuejs/awesome-vue)
 
 
 # Posts
