@@ -1,5 +1,35 @@
 Vue.use(VueRouter)
 
+let lists = {
+  '1': [
+    {
+      text: 'List 1-1'
+    },
+    {
+      text: 'List 1-2'
+    }
+  ],
+  '2': [
+    {
+      text: 'List 2-1'
+    },
+    {
+      text: 'List 2-2'
+    }
+  ]
+}
+
+let itens = {
+  '1': [
+    {
+      text: 'Item 1-1'
+    },
+    {
+      text: 'Item 1-2'
+    }
+  ]
+}
+
 const Item = {
   template: '<li>{{item.text}}</li>',
   props: ['item']
@@ -8,48 +38,51 @@ const Item = {
 Vue.component('list', {
   template: '#list',
   props: ['itens'],
+  data () {
+    return {
+      noItem: {
+        text: 'No item'
+      }
+    }
+  },
   components: {
     'item': Item
   }
 })
 
 
-const Foo = {
-  template: '#foo' ,
-  data () {
-    return {
-      itens: [
-        {
-          text: 'Foo 1'
-        },
-        {
-          text: 'Foo 2'
-        }
-      ]
+const PropsRouteComponent = {
+  template: '#route-component' ,
+  watch: {
+    '$route' (to, from) {
+      console.log(to, from)
+    }
+  },
+  props: ['id'],
+  computed: {
+    itens () {
+      return lists[this.id] || [];
     }
   }
 }
 
-const Bar = {
-  template: '<list :itens="itens"></list>',
-  data () {
-    return {
-      itens: [
-        {
-          text: 'Bar 1'
-        },
-        {
-          text: 'Bar 2'
-        }
-      ]
+const RouteComponent = {
+  template: '#route-component' ,
+  watch: {
+    '$route' (to, from) {
+      console.log(to, from)
+    }
+  },
+  computed: {
+    itens () {
+      return itens[this.$route.params.id] || [];
     }
   }
 }
-
 
 const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
+  { path: '/lists/:id', component: PropsRouteComponent, props: true },
+  { path: '/itens/:id', name: 'itens', component: RouteComponent }
 ]
 
 

@@ -13,8 +13,11 @@
       <!-- use router-link component for navigation. -->
       <!-- specify the link by passing the `to` prop. -->
       <!-- <router-link> will be rendered as an `<a>` tag by default -->
-      <router-link to="/foo">Go to Foo</router-link>
-      <router-link to="/bar">Go to Bar</router-link>
+      <router-link to="/lists/1">Go to lists 1</router-link>
+      <router-link to="/lists/2">Go to lists 2</router-link>
+      <router-link to="/lists/3">Go to lists 3</router-link>
+
+      <router-link :to="{name: 'itens', params: {id: '1'}}">Go to itens 1</router-link>
     </p>
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
@@ -26,13 +29,12 @@
   <ul id="list" v-if="itens.length > 0">
     <item v-for="item in itens" :item="item" :key="item"></item>
   </ul>
-
   <ul id="list" v-else>
-    <item item="noItem"></item>
+    <item :item="noItem"></item>
   </ul>
 </script>
 
-<script type="text/x-template" id="foo">
+<script type="text/x-template" id="route-component">
   <list :itens="itens"></list>
 </script>
 
